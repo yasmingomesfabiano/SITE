@@ -66,11 +66,15 @@ class Portifolio{
 
                         //animação especial para habilidades
                         if(entry.target.classList.contains('skill-catagory')){
-                            
+                            this.animateSkill(entry.target);
                         }
+
                     }
-                })
+                });
+                const animatedElements= document.querySelectorAll('.about, .skills, .projects, .experience, .contact, skill-catagory, .project-card, .timeline-item')
+                animatedElements.forEach(el => observer.observe)
             })
         }
 
 }
+
